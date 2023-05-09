@@ -5,7 +5,7 @@
 %global crate hashbrown
 
 Name:           rust-%{crate}
-Version:        0.11.2
+Version:        0.12.3
 Release:        1%{?dist}
 Summary:        Rust port of Google's SwissTable hash map
 
@@ -13,6 +13,7 @@ Summary:        Rust port of Google's SwissTable hash map
 License:        Apache-2.0 OR MIT
 URL:            https://crates.io/crates/hashbrown
 Source:         %{crates_source}
+Patch0:		hashbrown-0.12.3-build.patch
 
 ExclusiveArch:  %{rust_arches}
 %if %{__cargo_skip_build}
